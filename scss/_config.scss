@@ -1,4 +1,4 @@
-$primary-color: #444;
+$primary-color:#444;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/access-blur-business-1181271.jpg);
@@ -29,6 +29,16 @@ $background-opacity: 0.7;
 
     }
 }
+// Set the color 
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        $primary-color: #444;
+    } @else {
+        $primary-color: #fff;
+    }
+}
+
 
 // Media Query Mixins
 @mixin mediaSm {
